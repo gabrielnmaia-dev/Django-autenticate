@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+<h1>Home Pública</h1>
+
+{% if user.is_authenticated %}
+<a href="/painel/">Ir para o painel</a>
+<a href="/logout/">Sair</a>
+{% else %}
+<a href="/login/">Login</a>
+{% endif %} {% endblock %}
