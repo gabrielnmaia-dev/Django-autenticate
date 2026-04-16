@@ -1,9 +1,11 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block conteudo %}
 
-<h1>Perfil do {{user.username}}</h1>
+<h1>Perfil de {{user.username}}</h1>
 
 <p>Usuário: {{ user.username }}</p>
 <p>Email: {{ user.email }}</p>
 <p>Último login: {{ user.last_login }}</p>
+
+<a href="/painel/">voltar para painel</a>
 
 {% endblock %}

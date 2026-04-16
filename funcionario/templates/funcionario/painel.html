@@ -1,7 +1,11 @@
 {% extends 'base.html' %} {% block conteudo %}
 <h1>Bem-vindo ao Painel, {{ user.username }}!</h1>
+
+<a href="/perfil/">Ir para o Perfil</a>
+
 <form method="post" action="{% url 'logout' %}">
   {% csrf_token %}
   <button type="submit">Sair</button>
 </form>
+
 {% endblock %}
